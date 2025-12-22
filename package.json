@@ -1,0 +1,16 @@
+{
+  "name": "wedding-website",
+  "version": "1.0.0",
+  "description": "A simple wedding website for two computer programmers",
+  "scripts": {
+    "start": "npx http-server -p 3000 -o"
+  },
+  "keywords": [
+    "wedding"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
