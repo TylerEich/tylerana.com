@@ -8,60 +8,60 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Lato:wght@300;400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dist/output.css">
 </head>
-<body>
-    <header class="fixed-header">
-        <h1>Tyler ♥ Ana</h1>
+<body class="font-body bg-primary-bg text-text-primary leading-relaxed pt-20 md:pt-[70px]">
+    <header class="fixed top-0 left-0 right-0 bg-linear-to-br from-lilac-light to-white/[0.98] backdrop-blur-sm border-b-2 border-border z-[1000] py-5 px-8 shadow-[0_2px_10px_rgba(102,76,220,0.08)] md:p-4">
+        <h1 class="font-display text-[1.8rem] md:text-2xl sm:text-[1.3rem] font-medium text-center text-text-primary tracking-[0.08em]">Tyler ♥ Ana</h1>
     </header>
 
-    <main class="container">
-        <section class="hero-section">
-            <div class="newspaper-header">
-                <div class="special-edition">SPECIAL EDITION</div>
-                <h2 class="newspaper-title">The Wedding Post</h2>
-                <div class="special-edition">SPECIAL EDITION</div>
+    <main class="max-w-[900px] mx-auto p-8 md:p-4">
+        <section class="mb-12">
+            <div class="flex flex-col md:flex-row justify-between items-center py-8 md:py-6 md:flex-col md:gap-4 border-t-4 border-b-4 border-double border-text-primary mb-8 bg-linear-to-b from-transparent via-lilac-light to-transparent">
+                <div class="font-display text-[0.85rem] italic tracking-[0.15em] text-text-secondary px-4 md:px-0">SPECIAL EDITION</div>
+                <h2 class="font-display text-[2.8rem] md:text-[2rem] sm:text-[1.6rem] font-bold text-center tracking-[0.05em] text-text-primary flex-1">The Wedding Post</h2>
+                <div class="font-display text-[0.85rem] italic tracking-[0.15em] text-text-secondary px-4 md:px-0">SPECIAL EDITION</div>
             </div>
 
-            <div class="hero-content">
-                <h3 class="hero-title">
-                    <span class="names">TYLER & ANA</span>
-                    <span class="headline">are getting married!</span>
+            <div class="text-center">
+                <h3 class="font-display mb-8 flex flex-col gap-2">
+                    <span class="text-[3.5rem] md:text-[2.5rem] sm:text-[2rem] font-semibold tracking-[0.15em] sm:tracking-[0.1em] text-text-primary block">TYLER & ANA</span>
+                    <span class="text-[2.5rem] md:text-[1.8rem] sm:text-[1.5rem] font-normal italic text-text-secondary block">are getting married!</span>
                 </h3>
 
-                <div class="hero-image-container">
-                    <img src="hero-image.jpg" alt="Tyler and Ana" class="hero-image">
+                <div class="max-w-[700px] mx-auto my-10 md:my-6 p-6 md:p-4 bg-linear-to-br from-lilac-tint to-lilac-light border border-border shadow-[0_8px_24px_rgba(102,76,220,0.12)]">
+                    <img src="hero-image.jpg" alt="Tyler and Ana" class="hero-image w-full h-auto block border-3 border-primary-bg shadow-[0_4px_12px_rgba(0,0,0,0.15)]">
                 </div>
 
-                <div class="save-date">
-                    <h4>SAVE THE DATE</h4>
-                    <div class="heart">♥</div>
-                    <p class="wedding-date">April 11th, 2026</p>
-                    <p class="subtitle">The formal invitation and more information will be sent soon</p>
+                <div class="mt-8 py-10 sm:py-8 sm:px-4 px-8 border-t-2 border-b-2 border-text-primary bg-linear-to-b from-transparent via-lilac-light to-transparent">
+                    <h4 class="font-display text-[2.2rem] md:text-[1.8rem] sm:text-2xl font-semibold tracking-[0.12em] mb-3 text-text-primary">SAVE THE DATE</h4>
+                    <div class="text-[2rem] text-accent my-2">♥</div>
+                    <p class="font-display text-[2rem] md:text-2xl sm:text-[1.3rem] font-medium italic text-text-primary my-4">April 11th, 2026</p>
+                    <p class="font-body text-base italic text-text-secondary mt-6">The formal invitation and more information will be sent soon</p>
                 </div>
             </div>
         </section>
 
-        <section class="content-section">
-            <p class="intro-text">
+        <section class="my-16 py-12 md:py-8 px-8 md:px-6 bg-linear-to-br from-lilac-light to-white/50 border-l-4 border-accent shadow-[0_2px_8px_rgba(102,76,220,0.08)]">
+            <p class="font-display text-xl md:text-lg leading-[1.8] text-text-primary mb-6 italic">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </p>
 
-            <p class="body-text">
+            <p class="font-body text-[1.05rem] md:text-base leading-[1.8] text-text-secondary mb-6 text-justify md:text-left">
                 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
                 Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
             </p>
 
-            <p class="body-text">
+            <p class="font-body text-[1.05rem] md:text-base leading-[1.8] text-text-secondary mb-6 text-justify md:text-left">
                 Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
                 Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
             </p>
         </section>
 
-        <footer class="footer">
-            <p class="code-comment">// We can't wait to celebrate with you!</p>
+        <footer class="mt-16 p-8 text-center border-t border-border bg-linear-to-t from-lilac-light to-transparent">
+            <p class="font-mono text-text-secondary text-[0.95rem] italic">// We can't wait to celebrate with you!</p>
         </footer>
     </main>
 </body>
