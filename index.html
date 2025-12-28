@@ -34,16 +34,19 @@
       </header>
     </div>
 
-    <nav class="lang-toggle flex justify-center gap-4 py-4">
+    <nav class="lang-toggle flex justify-center py-4">
       <button
         type="button"
         data-lang="en"
-        class="active rounded-xl border border-black px-2 py-0.5 font-mono text-sm tracking-wide uppercase"
+        class="active px-4 py-2 font-mono text-sm tracking-wide uppercase"
       >
         EN
       </button>
-      <span class="text-text-secondary">|</span>
-      <button type="button" data-lang="pt" class="font-mono text-sm tracking-wide uppercase">
+      <button
+        type="button"
+        data-lang="pt"
+        class="px-4 py-2 font-mono text-sm uppercase tracking-wide"
+      >
         PT
       </button>
     </nav>
@@ -108,6 +111,19 @@
     </main>
 
     <script>
+      // Auto-detect language on first load
+      const userLang = navigator.language || navigator.userLanguage;
+      const defaultLang = userLang.startsWith("pt") ? "pt" : "en";
+
+      // Set initial language
+      document.body.classList.remove("lang-en", "lang-pt");
+      document.body.classList.add(`lang-${defaultLang}`);
+
+      document.querySelectorAll(".lang-toggle button").forEach((btn) => {
+        btn.classList.toggle("active", btn.dataset.lang === defaultLang);
+      });
+
+      // Handle language toggle clicks
       document.querySelector(".lang-toggle").addEventListener("click", (e) => {
         const button = e.target.closest("button[data-lang]");
         if (!button) return;

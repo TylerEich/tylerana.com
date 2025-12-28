@@ -59,18 +59,20 @@
 
   /* Language toggle buttons */
   .lang-toggle button {
-    transition: opacity 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
   }
 
   .lang-toggle button.active {
-    opacity: 1;
+    background-color: var(--color-accent);
+    color: var(--color-neutral-50);
   }
 
   .lang-toggle button:not(.active) {
-    opacity: 0.5;
+    background-color: var(--color-neutral-300);
+    color: var(--color-neutral-900);
   }
 
   .lang-toggle button:not(.active):hover {
-    opacity: 0.75;
+    background-color: #d0d0d0;
   }
 }
