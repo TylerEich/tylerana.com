@@ -28,6 +28,7 @@ npm start
 This will build Tailwind CSS and start a local server at http://localhost:3000 with CSS hot-reloading.
 
 To build the CSS once (for production):
+
 ```bash
 npm run build
 ```
