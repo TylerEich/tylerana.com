@@ -35,12 +35,13 @@
     --drop-shadow-lg: 0 4px 4px rgb(0 0 0 / 0.15);
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
-    --color-accent: #664cdc;
-    --color-lilac-light: #f5f3fa;
+    --color-accent: #8b7fa8;
+    --color-accent-lighter: #d4cfe0;
+    --color-lilac-light: #f7f5fb;
     --color-primary-bg: #ffffff;
     --color-text-primary: #2d2d3d;
     --color-text-secondary: #6b6b7b;
-    --color-border: #d8d5e3;
+    --color-border: #ddd9e6;
     --font-display: "Playfair Display", serif;
     --font-body: "IBM Plex Mono", "Courier New", Courier, monospace;
   }
@@ -505,7 +506,7 @@
     color: var(--color-neutral-900);
   }
   .lang-toggle button:not(.active):hover {
-    background-color: #d0d0d0;
+    background-color: var(--color-accent-lighter);
   }
 }
 @property --tw-border-style {
