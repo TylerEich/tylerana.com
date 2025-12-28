@@ -13,7 +13,7 @@
     />
     <link rel="stylesheet" href="dist/output.css" />
   </head>
-  <body class="font-body bg-primary-bg text-text-primary leading-relaxed">
+  <body class="lang-en font-body bg-primary-bg text-text-primary leading-relaxed">
     <div class="grid w-full">
       <img
         src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -34,30 +34,40 @@
       </header>
     </div>
 
+    <nav class="lang-toggle flex justify-center gap-4 py-4">
+      <button
+        type="button"
+        data-lang="en"
+        class="active rounded-xl border border-black px-2 py-0.5 font-mono text-sm tracking-wide uppercase"
+      >
+        EN
+      </button>
+      <span class="text-text-secondary">|</span>
+      <button type="button" data-lang="pt" class="font-mono text-sm tracking-wide uppercase">
+        PT
+      </button>
+    </nav>
+
     <main class="mx-auto max-w-4xl p-4 sm:p-8">
       <section class="mb-12">
         <div class="text-center">
-          <h3 class="font-display mb-8 flex flex-col gap-2">
-            <span class="text-text-primary block text-4xl font-semibold tracking-widest sm:text-6xl"
-              >TYLER & ANA</span
+          <div class="border-text-primary mt-8 px-4 py-8 sm:px-8 sm:py-10">
+            <h4
+              class="translated font-display text-text-primary mb-3 text-2xl font-semibold tracking-wide uppercase"
             >
-            <span class="text-text-secondary block text-2xl font-normal italic sm:text-4xl"
-              >are getting married!</span
-            >
-          </h3>
-
-          <div
-            class="border-text-primary via-lilac-light mt-8 border-t-2 border-b-2 bg-linear-to-b from-transparent to-transparent px-4 py-8 sm:px-8 sm:py-10"
-          >
-            <h4 class="font-display text-text-primary mb-3 text-2xl font-semibold tracking-wide">
-              SAVE THE DATE
+              <span class="en">Save the date</span>
+              <span class="pt">Reserve a data</span>
             </h4>
             <div class="text-accent my-2 text-3xl">♥</div>
-            <p class="font-display text-text-primary my-4 text-2xl font-medium italic sm:text-3xl">
-              April 11th, 2026
+            <p
+              class="translated font-display text-text-primary my-4 text-2xl font-medium italic sm:text-3xl"
+            >
+              <span class="en">April 11th, 2026</span>
+              <span class="pt">11 de abril de 2026</span>
             </p>
-            <p class="font-body text-text-secondary mt-6 text-base italic">
-              The formal invitation and more information will be sent soon
+            <p class="translated font-body text-text-secondary mt-6 text-base italic">
+              <span class="en">The formal invitation and more information will be sent soon</span>
+              <span class="pt">O convite formal e mais informações serão enviados em breve</span>
             </p>
           </div>
         </div>
@@ -90,10 +100,26 @@
       <footer
         class="border-border from-lilac-light mt-16 border-t bg-linear-to-t to-transparent p-8 text-center"
       >
-        <p class="text-text-secondary font-mono text-sm italic">
-          // We can't wait to celebrate with you!
+        <p class="translated text-text-secondary font-mono text-sm italic">
+          <span class="en">// We can't wait to celebrate with you!</span>
+          <span class="pt">// Mal podemos esperar para celebrar com vocês!</span>
         </p>
       </footer>
     </main>
+
+    <script>
+      document.querySelector(".lang-toggle").addEventListener("click", (e) => {
+        const button = e.target.closest("button[data-lang]");
+        if (!button) return;
+
+        const lang = button.dataset.lang;
+        document.body.classList.remove("lang-en", "lang-pt");
+        document.body.classList.add(`lang-${lang}`);
+
+        document.querySelectorAll(".lang-toggle button").forEach((btn) => {
+          btn.classList.toggle("active", btn.dataset.lang === lang);
+        });
+      });
+    </script>
   </body>
 </html>

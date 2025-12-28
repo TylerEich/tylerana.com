@@ -6,6 +6,7 @@
     --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: "IBM Plex Mono", "Courier New", Courier, monospace;
+    --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
     --container-4xl: 56rem;
@@ -33,6 +34,7 @@
     --tracking-wide: 0.025em;
     --tracking-widest: 0.1em;
     --leading-relaxed: 1.625;
+    --radius-xl: 0.75rem;
     --drop-shadow-lg: 0 4px 4px rgb(0 0 0 / 0.15);
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
@@ -43,7 +45,7 @@
     --color-text-secondary: #6b6b7b;
     --color-border: #d8d5e3;
     --font-display: "Playfair Display", serif;
-    --font-body: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --font-body: "IBM Plex Mono", "Courier New", Courier, monospace;
   }
 }
 @layer base {
@@ -264,8 +266,21 @@
   .place-items-center {
     place-items: center;
   }
+  .justify-center {
+    justify-content: center;
+  }
   .gap-2 {
     gap: calc(var(--spacing) * 2);
+  }
+  .gap-4 {
+    gap: calc(var(--spacing) * 4);
+  }
+  .rounded-xl {
+    border-radius: var(--radius-xl);
+  }
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
   }
   .border-t {
     border-top-style: var(--tw-border-style);
@@ -285,6 +300,9 @@
   }
   .border-accent {
     border-color: var(--color-accent);
+  }
+  .border-black {
+    border-color: var(--color-black);
   }
   .border-border {
     border-color: var(--color-border);
@@ -346,11 +364,20 @@
   .p-8 {
     padding: calc(var(--spacing) * 8);
   }
+  .px-2 {
+    padding-inline: calc(var(--spacing) * 2);
+  }
   .px-4 {
     padding-inline: calc(var(--spacing) * 4);
   }
   .px-6 {
     padding-inline: calc(var(--spacing) * 6);
+  }
+  .py-0\.5 {
+    padding-block: calc(var(--spacing) * 0.5);
+  }
+  .py-4 {
+    padding-block: calc(var(--spacing) * 4);
   }
   .py-6 {
     padding-block: calc(var(--spacing) * 6);
@@ -478,12 +505,6 @@
       text-align: left;
     }
   }
-  .sm\:text-2xl {
-    @media (width >= 40rem) {
-      font-size: var(--text-2xl);
-      line-height: var(--tw-leading, var(--text-2xl--line-height));
-    }
-  }
   .sm\:text-3xl {
     @media (width >= 40rem) {
       font-size: var(--text-3xl);
@@ -518,6 +539,39 @@
 @layer components {
   .hero-image {
     filter: grayscale(100%) contrast(1.1) brightness(0.85) sepia(0.3) hue-rotate(230deg) saturate(0.8);
+  }
+  .translated {
+    display: grid;
+  }
+  .translated > .en, .translated > .pt {
+    grid-area: 1 / 1;
+    transition: opacity 0.3s ease-in-out;
+  }
+  body.lang-en .translated > .en, body:not(.lang-pt) .translated > .en {
+    opacity: 1;
+  }
+  body.lang-en .translated > .pt, body:not(.lang-pt) .translated > .pt {
+    opacity: 0;
+    pointer-events: none;
+  }
+  body.lang-pt .translated > .pt {
+    opacity: 1;
+  }
+  body.lang-pt .translated > .en {
+    opacity: 0;
+    pointer-events: none;
+  }
+  .lang-toggle button {
+    transition: opacity 0.2s ease-in-out;
+  }
+  .lang-toggle button.active {
+    opacity: 1;
+  }
+  .lang-toggle button:not(.active) {
+    opacity: 0.5;
+  }
+  .lang-toggle button:not(.active):hover {
+    opacity: 0.75;
   }
 }
 @property --tw-border-style {
