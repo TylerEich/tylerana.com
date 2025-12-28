@@ -15,8 +15,7 @@
 
   /* Fonts */
   --font-display: "Playfair Display", serif;
-  --font-body: "IBM Plex Mono", "Courier New", Courier, monospace;
-  --font-mono: "IBM Plex Mono", "Courier New", Courier, monospace;
+  --font-body: "Crimson Text", Georgia, serif;
 }
 
 /* Custom component styles that are difficult to express with utilities */
