@@ -14,7 +14,7 @@
   /* Fonts */
   --font-display: "Playfair Display", serif;
   --font-body: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  --font-mono: "Courier New", Courier, monospace;
+  --font-mono: "IBM Plex Mono", "Courier New", Courier, monospace;
 }
 
 /* Custom component styles that are difficult to express with utilities */

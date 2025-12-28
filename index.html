@@ -8,24 +8,29 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Lato:wght@300;400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Lato:wght@300;400&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="dist/output.css" />
   </head>
   <body class="font-body bg-primary-bg text-text-primary leading-relaxed">
-    <div class="relative w-full">
+    <div class="grid w-full">
       <img
         src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         alt="Tyler and Ana"
-        class="hero-image block h-auto w-full"
+        class="hero-image col-start-1 row-start-1 block h-auto w-full"
       />
-      <header class="absolute top-0 right-0 left-0 px-4 py-6 sm:px-8 sm:py-8">
-        <h1
-          class="font-display text-center text-3xl font-semibold tracking-widest text-white uppercase drop-shadow-lg sm:text-5xl"
-        >
-          Tyler &amp;&nbsp;Ana
-        </h1>
+      <header class="col-start-1 row-start-1 grid place-items-center px-4 py-6 sm:px-8 sm:py-8">
+        <div class="text-center">
+          <h1
+            class="font-display text-3xl font-semibold tracking-widest text-white uppercase drop-shadow-lg sm:text-5xl"
+          >
+            Tyler &amp;&nbsp;Ana
+          </h1>
+          <p class="mt-4 font-mono text-2xl font-normal text-white drop-shadow-lg sm:text-3xl">
+            2026-04-11
+          </p>
+        </div>
       </header>
     </div>
 
