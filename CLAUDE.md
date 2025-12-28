@@ -8,8 +8,8 @@ A simple, one-or-two page static HTML + CSS website that will be sent directly t
 
 ## Tech Stack
 
-- **Static HTML + CSS** - Simple, lightweight, and effective
-- **Node.js** - Used only for a simple build script to serve the site locally
+- **Static HTML + Tailwind CSS v4** - Simple, lightweight, and effective
+- **Node.js** - Used for build scripts and local development server
 
 ## Design
 
@@ -25,7 +25,12 @@ npm install
 npm start
 ```
 
-This will start a local server at http://localhost:3000 serving index.html.
+This will build Tailwind CSS and start a local server at http://localhost:3000 with CSS hot-reloading.
+
+To build the CSS once (for production):
+```bash
+npm run build
+```
 
 ## Deployment
 

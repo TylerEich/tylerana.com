@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "A simple wedding website for two computer programmers",
   "scripts": {
-    "start": "npx http-server -p 3000 -o"
+    "build:css": "npx @tailwindcss/cli -i ./src/input.css -o ./dist/output.css",
+    "watch:css": "npx @tailwindcss/cli -i ./src/input.css -o ./dist/output.css --watch",
+    "start": "npm run build:css && npx concurrently \"npm run watch:css\" \"npx http-server -p 3000\"",
+    "build": "npm run build:css"
   },
   "keywords": [
     "wedding"
@@ -11,6 +14,9 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "http-server": "^14.1.1"
+    "@tailwindcss/cli": "^4.1.18",
+    "concurrently": "^9.2.1",
+    "http-server": "^14.1.1",
+    "tailwindcss": "^4.1.18"
   }
 }
