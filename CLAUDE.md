@@ -33,6 +33,10 @@ To build the CSS once (for production):
 npm run build
 ```
 
+## Git Workflow
+
+Commit and push directly to `main`. Do not create feature branches or pull requests.
+
 ## Deployment
 
 Since this is a static site, it can be deployed to any static hosting service (GitHub Pages, Netlify, Vercel, etc.).
